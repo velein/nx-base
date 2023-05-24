@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>project-name</title>
+    <base href="/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <script type="text/javascript">
+    window.config = {};
+    window.config.VITE_APP_ENV = '%VITE_APP_ENV%';
+    window.config.VITE_APP_GATEWAY_API_URL = '%VITE_APP_GATEWAY_API_URL%';
+    window.config.VITE_APP_AWS_REGION = '%VITE_APP_AWS_REGION%';
+    window.config.VITE_APP_AWS_USER_POOL_ID = '%VITE_APP_AWS_USER_POOL_ID%';
+    window.config.VITE_APP_AWS_APP_CLIENT_ID = '%VITE_APP_AWS_APP_CLIENT_ID%';
+  </script>
+  <body>
+    <div id="root"></div>
+    <script>
+      if (global === undefined) {
+        var global = window;
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
