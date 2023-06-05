@@ -29,7 +29,8 @@
       "configurations": {
         "development": {
           "buildTarget": "web-project-name:build:development",
-          "hmr": true
+          "hmr": true,
+          "host": "0.0.0.0"
         },
         "production": {
           "buildTarget": "web-project-name:build:production",
