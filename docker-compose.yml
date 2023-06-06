@@ -1,0 +1,9 @@
+services:
+  app-web-project-name:
+    build: .
+    container_name: app-web-project-name
+    command: yarn serve:web-project-name
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/code

@@ -1,7 +1,10 @@
 FROM node:18
-WORKDIR /usr/src/app
+WORKDIR /code
 
-COPY . .
+COPY package.json lerna.json ./
+
 RUN yarn workspace:set
 
-CMD ["yarn", "serve:web-project-name"]
+COPY . .
+
+EXPOSE 3000
