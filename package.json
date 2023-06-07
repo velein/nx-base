@@ -10,7 +10,7 @@
     "format-check:all": "nx format:check --all --verbose",
     "workspace:reset": "nx reset && lerna clean --yes && rimraf dist && rimraf node_modules yarn.lock && yarn workspace:set",
     "workspace:clear-cache": "nx reset",
-    "workspace:set": "yarn install --frozen-lockfile && yarn lerna bootstrap"
+    "workspace:set": "yarn install --frozen-lockfile && yarn lerna bootstrap && yarn husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
