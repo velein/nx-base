@@ -1,10 +1,7 @@
 FROM node:18
+
 WORKDIR /code
 
-COPY package.json lerna.json ./
-
-RUN yarn workspace:set
-
-COPY . .
+ENTRYPOINT ["/code/entrypoint.sh"]
 
 EXPOSE 3000
