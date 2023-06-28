@@ -8,9 +8,9 @@
     "lint:all": "nx run-many --all --target=lint --verbose",
     "format-write:all": "nx format:write --all --verbose",
     "format-check:all": "nx format:check --all --verbose",
-    "workspace:reset": "nx reset && lerna clean --yes && rimraf dist && rimraf node_modules yarn.lock && yarn workspace:set",
+    "workspace:reset": "nx reset && lerna clean --yes && rimraf dist && rimraf node_modules yarn.lock package.lock && npm run workspace:set",
     "workspace:clear-cache": "nx reset",
-    "workspace:set": "yarn install && yarn lerna bootstrap && yarn husky install"
+    "workspace:set": "npm install && lerna bootstrap && husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",

@@ -3,17 +3,10 @@ services:
   app-web-project-name:
     build: .
     container_name: app-web-project-name
-    command: yarn serve:web-project-name
+    command: npm run serve:web-project-name
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    environment:
-      - HOME=$HOME
-    user: '501:20'
     ports:
       - 3000:3000
     volumes:
-      - ./passwd:/etc/passwd:ro
-      - /etc/group:/etc/group:ro
       - .:/code
-      - $HOME:$HOME
-
