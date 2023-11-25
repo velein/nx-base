@@ -1,25 +1,13 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "project-name",
   "workspaceLayout": {
     "appsDir": "apps",
     "libsDir": "libs"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheableOperations": []
-      }
-    }
   },
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
-    },
-    "e2e": {
-      "inputs": ["default", "^production"]
     },
     "lint": {
       "inputs": [
@@ -28,8 +16,9 @@
         "{workspaceRoot}/.eslintignore"
       ]
     },
-    "test": {
-      "inputs": ["default", "^production"]
+    "@nx/vite:test": {
+      "inputs": ["default", "^production"],
+      "cache": true
     }
   },
   "namedInputs": {

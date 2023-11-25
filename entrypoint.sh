@@ -3,7 +3,7 @@
 set -xe
 
 echo "USER: $(whoami)"
-yarn workspace:set
+npm run workspace:set
 
 
 echo "Command \"$@\""

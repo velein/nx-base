@@ -30,7 +30,8 @@
         "development": {
           "buildTarget": "web-project-name:build:development",
           "hmr": true,
-          "host": "0.0.0.0"
+          "host": "0.0.0.0",
+          "port": 3000
         },
         "production": {
           "buildTarget": "web-project-name:build:production",
@@ -55,14 +56,14 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/apps/web-project-name"],
+      "outputs": ["{workspaceRoot}/coverage/apps/web-project-name"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/apps/web-project-name"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/web-project-name/**/*.{ts,tsx,js,jsx}"]

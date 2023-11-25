@@ -1,9 +1,11 @@
+import { ThemeProvider } from '@mui/material';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+
+import { createAppTheme } from 'libs/web/features/theme';
+
 import { App } from './app';
-import { ThemeProvider } from '@mui/material';
-import { createAppTheme } from '@project-name/web-theme';
 
 const theme = createAppTheme();
 

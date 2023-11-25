@@ -1,28 +1,29 @@
 /*
  * Import necessary modules
  */
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import svgr from 'vite-plugin-svgr';
+import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
+import svgr from 'vite-plugin-svgr';
+import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 /*
  * Define the viteBaseConfig function
  */
-export const viteBaseConfig = (
-  settings: {
-    viteChecker?: {
-      tsconfigPath: string;
-      absoluteAppPath: string;
-    };
-  } = {},
-) => {
-  const { viteChecker } = settings;
+export const viteBaseConfig = (settings: {
+  viteChecker?: {
+    tsconfigPath: string;
+    absoluteAppPath: string;
+  };
+  name: string;
+}) => {
+  const { viteChecker, name } = settings;
 
   /*
    * Return the configuration object using defineConfig
    */
   return defineConfig({
+    cacheDir: `./node_modules/.vite/${name}`,
     plugins: [
       /*
        * Use the React plugin
@@ -33,6 +34,10 @@ export const viteBaseConfig = (
        * Use the SVGR plugin for handling SVG files
        */
       svgr(),
+
+      viteTsConfigPaths({
+        root: './',
+      }),
 
       /*
        * Use the vite-plugin-checker plugin for type checking and linting

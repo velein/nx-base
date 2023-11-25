@@ -10,14 +10,16 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "strict": true,
     "lib": ["es5", "es2015", "es2019", "es2020", "WebWorker", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@project-name/web-features": ["libs/web-features/src/index.ts"],
-      "@project-name/web-theme": ["libs/web-theme/src/index.ts"],
-      "@project-name/web-utils": ["libs/web-utils/src/index.ts"]
+      "libs/web/features/*": ["libs/web/features/src/*"],
+      "libs/web/utils/*": ["libs/web/utils/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

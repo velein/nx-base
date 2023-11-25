@@ -1,8 +1,8 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
+
 import { palette } from './palette';
 
 export const typography: TypographyOptions = {
-  fontFamily: "'Poppins', sans-serif",
   h1: {
     fontSize: '36px',
     lineHeight: 1.5,

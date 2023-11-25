@@ -112,3 +112,7 @@ dist
 yarn-error.log
 
 passwd
+.nx/cache
+
+# NX
+.nx
