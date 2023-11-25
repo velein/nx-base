@@ -2,6 +2,7 @@
  * Import necessary modules
  */
 import react from '@vitejs/plugin-react';
+import { join } from 'path';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import svgr from 'vite-plugin-svgr';
@@ -23,7 +24,7 @@ export const viteBaseConfig = (settings: {
    * Return the configuration object using defineConfig
    */
   return defineConfig({
-    cacheDir: `./node_modules/.vite/${name}`,
+    cacheDir: join(__dirname, 'node_modules/.vite/${name}'),
     plugins: [
       /*
        * Use the React plugin
