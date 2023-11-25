@@ -3,8 +3,7 @@
 set -xe
 
 echo "USER: $(whoami)"
-npm run workspace:set
-
+npm run npm install
 
 echo "Command \"$@\""
 
