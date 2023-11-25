@@ -30,7 +30,7 @@ Do a search and replace for `web-project-name` and replace it with the name of y
 For example `my-awesome-app`. It should be all lowercase and use dashes instead of spaces.
 Please note that further `serve` and `build` commands will use this name.
 
-To install the dependencies run `npm run workspace:set`, this will install all the dependencies for all the applications and libraries.
+To install the dependencies run `npm install`, this will install all the dependencies for all the applications and libraries.
 
 ## Resetting the project
 
